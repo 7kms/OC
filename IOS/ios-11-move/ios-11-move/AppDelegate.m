@@ -1,13 +1,14 @@
 //
 //  AppDelegate.m
-//  ios-10-Gesture
+//  ios-11-move
 //
-//  Created by tangliang on 16/7/27.
-//  Copyright © 2016年 tangliang. All rights reserved.
+//  Created by 魔方 on 16/7/27.
+//  Copyright © 2016年 魔方. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "TLPhotoViewController.h"
+#import "TLShakeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,13 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    _window.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:0.6];
-    TLPhotoViewController *mainController = [[TLPhotoViewController alloc] init];
+    TLShakeViewController *mainController = [[TLShakeViewController alloc] init];
     _window.rootViewController = mainController;
     [_window makeKeyAndVisible];
-    
     return YES;
 }
 

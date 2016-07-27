@@ -1,13 +1,15 @@
 //
 //  AppDelegate.m
-//  ios-10-Gesture
+//  ios11-remoteControl
 //
-//  Created by tangliang on 16/7/27.
-//  Copyright © 2016年 tangliang. All rights reserved.
+//  Created by 魔方 on 16/7/27.
+//  Copyright © 2016年 魔方. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "TLPhotoViewController.h"
+#import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
+
 @interface AppDelegate ()
 
 @end
@@ -16,13 +18,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    _window.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:0.6];
-    TLPhotoViewController *mainController = [[TLPhotoViewController alloc] init];
+    _window.backgroundColor = [UIColor colorWithRed:249/255.0 green:249/255.0 blue:249/255.0 alpha:1];
+    //设置全局导航条风格和颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:23/255.0 green:180/255.0 blue:237/255.0 alpha:1]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    ViewController *mainController = [[UIViewController alloc] init];
     _window.rootViewController = mainController;
+    //设置播放会话，在后台可以继续播放（还需要设置程序允许后台运行模式）
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    if(![[AVAudioSession sharedInstance] setActive:YES error:nil])
+    {
+        NSLog(@"Failed to set up a session.");
+    }
+    
+    
+    //启用远程控制事件接收
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    //    [self becomeFirstResponder];
+    
     [_window makeKeyAndVisible];
+    
     
     return YES;
 }
