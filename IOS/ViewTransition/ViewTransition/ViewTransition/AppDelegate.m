@@ -50,7 +50,8 @@
 //    _window.rootViewController=navigationController;
     
     KCMainViewController *mainController=[[KCMainViewController alloc]init];
-    _window.rootViewController=mainController;
+    UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:mainController];
+    _window.rootViewController=navigationController;
     
     [_window makeKeyAndVisible];
     

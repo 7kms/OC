@@ -18,13 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setTitle:@"personal detail"];
+    NSLog(@"personal detail");
+    //self.title = @"personal detail";
+    //self.navigationItem.title = @"personal detail";
     //信息显示标签
     _lbUserInfo =[[UILabel alloc]initWithFrame:CGRectMake(0, 100,320 ,30)];
     _lbUserInfo.textAlignment=NSTextAlignmentCenter;
     _lbUserInfo.textColor=[UIColor colorWithRed:23/255.0 green:180/255.0 blue:237/255.0 alpha:1];
     [self.view addSubview:_lbUserInfo];
-    
+
     //关闭按钮
     UIButton *btnClose=[UIButton buttonWithType:UIButtonTypeSystem];
     btnClose.frame=CGRectMake(110, 200, 100, 30);
@@ -38,6 +41,7 @@
 
 #pragma mark 关闭
 -(void)close{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

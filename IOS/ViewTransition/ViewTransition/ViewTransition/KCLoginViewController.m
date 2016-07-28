@@ -61,7 +61,7 @@
 
 #pragma mark 登录操作
 -(void)login{
-    if ([_txtUserName.text isEqualToString:@"abc"] && [_txtPassword.text isEqualToString:@"123"] ) {
+    if ([[_txtUserName.text uppercaseString] isEqualToString:@"ABC"] && [_txtPassword.text isEqualToString:@"123"] ) {
         //调用代理方法传参
         [self.delegate showUserInfoWithUserName:_txtUserName.text];
         

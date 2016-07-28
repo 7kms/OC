@@ -41,7 +41,7 @@
 #pragma mark 添加导航栏
 -(void)addNavigationBar{
     //创建一个导航栏
-    UINavigationBar *navigationBar=[[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 44+20)];
+    UINavigationBar *navigationBar=[[UINavigationBar alloc]initWithFrame:CGRectMake(0, 60, 320, 44+20)];
     //navigationBar.tintColor=[UIColor whiteColor];
     [self.view addSubview:navigationBar];
     //创建导航控件内容
@@ -78,9 +78,11 @@
 #pragma mark 点击查看我的信息
 -(void)showInfo{
     if (_isLogon) {
+        NSLog(@"me has been taped");
         KCMeViewController *meController=[[KCMeViewController alloc]init];
         meController.userInfo=_loginInfo.text;
-        [self presentViewController:meController animated:YES completion:nil];
+        [self.navigationController pushViewController:meController animated:YES];
+        //[self presentViewController:meController animated:YES completion:nil];
     }
 }
 
