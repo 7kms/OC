@@ -32,7 +32,6 @@
     PrintRect([[UIScreen mainScreen] bounds]);
     NSLog(@"[[UIScreen mainScreen] applicationFrame]");
     PrintRect([[UIScreen mainScreen] applicationFrame]);
-    
 }
 
 @end

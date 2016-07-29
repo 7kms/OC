@@ -28,30 +28,33 @@
     _window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     _window.backgroundColor =[UIColor colorWithRed:249/255.0 green:249/255.0 blue:249/255.0 alpha:1];
-//    KCTabBarViewController *tabBarController=[[KCTabBarViewController alloc]init];
-//    
-//    KCWebChatViewController *webChatController=[[KCWebChatViewController alloc]init];
-//    KCContactViewController *contactController=[[KCContactViewController alloc]init];
-//    tabBarController.viewControllers=@[webChatController,contactController];
-//    //注意默认情况下UITabBarController在加载子视图时是懒加载的，所以这里调用一次contactController，否则在第一次展示时只有第一个控制器tab图标，contactController的tab图标不会显示
+    KCTabBarViewController *tabBarController=[[KCTabBarViewController alloc]init];
+    
+    KCWebChatViewController *webChatController=[[KCWebChatViewController alloc]init];
+    KCContactViewController *contactController=[[KCContactViewController alloc]init];
+    contactController.tabBarItem.title=@"Contact";
+        contactController.tabBarItem.image=[UIImage imageNamed:@"tabbar_contacts.png"];
+        contactController.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_contactsHL.png"];
+    tabBarController.viewControllers=@[webChatController,contactController];
+    //注意默认情况下UITabBarController在加载子视图时是懒加载的，所以这里调用一次contactController，否则在第一次展示时只有第一个控制器tab图标，contactController的tab图标不会显示
 //    for (UIViewController *controller in tabBarController.viewControllers) {
 //        UIViewController *view= controller.view;
 //    }
-//    
-//    _window.rootViewController=tabBarController;
+    
+    _window.rootViewController=tabBarController;
 
     //设置全局导航条风格和颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:23/255.0 green:180/255.0 blue:237/255.0 alpha:1]];
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-
-//    KCFriendViewController *friendController=[[KCFriendViewController alloc]init];
-//    UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:friendController];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:23/255.0 green:180/255.0 blue:237/255.0 alpha:1]];
+//    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+//
+////    KCFriendViewController *friendController=[[KCFriendViewController alloc]init];
+////    UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:friendController];
+////    
+////    _window.rootViewController=navigationController;
 //    
+//    KCMainViewController *mainController=[[KCMainViewController alloc]init];
+//    UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:mainController];
 //    _window.rootViewController=navigationController;
-    
-    KCMainViewController *mainController=[[KCMainViewController alloc]init];
-    UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:mainController];
-    _window.rootViewController=navigationController;
     
     [_window makeKeyAndVisible];
     

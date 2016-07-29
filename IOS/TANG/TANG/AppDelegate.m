@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "TLTabBarViewController.h"
+#import "TLTableViewController.h"
+#import "TLPersonalViewController.h"
+
+
 
 @interface AppDelegate ()
 
@@ -17,6 +22,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+    TLTabBarViewController *tabBarController = [[TLTabBarViewController alloc] init];
+    //设置全局导航条风格和颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:23/255.0 green:180/255.0 blue:237/255.0 alpha:1]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    
+    TLTableViewController *tableViewController = [[TLTableViewController alloc] init];
+    TLPersonalViewController *personalViewController = [[TLPersonalViewController alloc] init];
+    //设置图标、标题(tabBarItem是显示在tabBar上的标签)
+    tableViewController.tabBarItem.title=@"table";//注意如果这个标题不设置默认在页签上显示视图控制器标题
+    tableViewController.tabBarItem.image=[UIImage imageNamed:@"table"];//默认图片
+    tableViewController.tabBarItem.selectedImage=[UIImage imageNamed:@"table-selected"];//选中图片
+    personalViewController.tabBarItem.title=@"my";
+    personalViewController.tabBarItem.image=[UIImage imageNamed:@"personal"];
+    personalViewController.tabBarItem.selectedImage=[UIImage imageNamed:@"personal-selected"];
+    
+    UINavigationController *navTableViewController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    UINavigationController *navPersonalViewController = [[UINavigationController alloc] initWithRootViewController:personalViewController];
+    
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navTableViewController, navPersonalViewController ,nil];
+
+    //[tabBarController setSelectedIndex:1];
+    
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+    [navigationController setNavigationBarHidden:YES];
+    
+    _window.rootViewController = navigationController;
+
+    [_window makeKeyAndVisible];
     return YES;
 }
 

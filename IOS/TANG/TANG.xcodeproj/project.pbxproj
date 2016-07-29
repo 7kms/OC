@@ -13,6 +13,13 @@
 		058DEA721D49F18B0003E240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058DEA701D49F18B0003E240 /* Main.storyboard */; };
 		058DEA741D49F18B0003E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058DEA731D49F18B0003E240 /* Assets.xcassets */; };
 		058DEA771D49F18B0003E240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058DEA751D49F18B0003E240 /* LaunchScreen.storyboard */; };
+		05B6A15B1D4ADEF4005E6D31 /* TLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B6A15A1D4ADEF3005E6D31 /* TLTabBarViewController.m */; };
+		05B6A15E1D4AE062005E6D31 /* TLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B6A15D1D4AE062005E6D31 /* TLTableViewController.m */; };
+		05B6A1611D4AF42B005E6D31 /* TLPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B6A1601D4AF42B005E6D31 /* TLPersonalViewController.m */; };
+		05B6A1651D4B2C5F005E6D31 /* tabChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B6A1641D4B2C5F005E6D31 /* tabChangeController.m */; };
+		05B6A1671D4B343C005E6D31 /* progress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05B6A1661D4B343C005E6D31 /* progress.plist */; };
+		05B6A16A1D4B3778005E6D31 /* TLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B6A1691D4B3778005E6D31 /* TLItem.m */; };
+		05B6A16D1D4B9234005E6D31 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B6A16C1D4B9234005E6D31 /* ItemDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,19 @@
 		058DEA731D49F18B0003E240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058DEA761D49F18B0003E240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058DEA781D49F18B0003E240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05B6A1591D4ADEF3005E6D31 /* TLTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTabBarViewController.h; sourceTree = "<group>"; };
+		05B6A15A1D4ADEF3005E6D31 /* TLTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarViewController.m; sourceTree = "<group>"; };
+		05B6A15C1D4AE062005E6D31 /* TLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTableViewController.h; sourceTree = "<group>"; };
+		05B6A15D1D4AE062005E6D31 /* TLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTableViewController.m; sourceTree = "<group>"; };
+		05B6A15F1D4AF42B005E6D31 /* TLPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLPersonalViewController.h; sourceTree = "<group>"; };
+		05B6A1601D4AF42B005E6D31 /* TLPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLPersonalViewController.m; sourceTree = "<group>"; };
+		05B6A1631D4B2C5F005E6D31 /* tabChangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabChangeController.h; sourceTree = "<group>"; };
+		05B6A1641D4B2C5F005E6D31 /* tabChangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabChangeController.m; sourceTree = "<group>"; };
+		05B6A1661D4B343C005E6D31 /* progress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = progress.plist; sourceTree = "<group>"; };
+		05B6A1681D4B3778005E6D31 /* TLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLItem.h; sourceTree = "<group>"; };
+		05B6A1691D4B3778005E6D31 /* TLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLItem.m; sourceTree = "<group>"; };
+		05B6A16B1D4B9234005E6D31 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		05B6A16C1D4B9234005E6D31 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,10 @@
 		058DEA661D49F18B0003E240 /* TANG */ = {
 			isa = PBXGroup;
 			children = (
+				05B6A1621D4B2799005E6D31 /* TabBar */,
+				05B6A1581D4ADE35005E6D31 /* model */,
+				05B6A1571D4ADE20005E6D31 /* Views */,
+				05B6A1561D4ADE10005E6D31 /* Controllers */,
 				058DEA6A1D49F18B0003E240 /* AppDelegate.h */,
 				058DEA6B1D49F18B0003E240 /* AppDelegate.m */,
 				058DEA6D1D49F18B0003E240 /* ViewController.h */,
@@ -75,8 +99,49 @@
 			isa = PBXGroup;
 			children = (
 				058DEA681D49F18B0003E240 /* main.m */,
+				05B6A1661D4B343C005E6D31 /* progress.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05B6A1561D4ADE10005E6D31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05B6A1631D4B2C5F005E6D31 /* tabChangeController.h */,
+				05B6A1641D4B2C5F005E6D31 /* tabChangeController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		05B6A1571D4ADE20005E6D31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05B6A16B1D4B9234005E6D31 /* ItemDetailViewController.h */,
+				05B6A16C1D4B9234005E6D31 /* ItemDetailViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		05B6A1581D4ADE35005E6D31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				05B6A1681D4B3778005E6D31 /* TLItem.h */,
+				05B6A1691D4B3778005E6D31 /* TLItem.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		05B6A1621D4B2799005E6D31 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				05B6A1591D4ADEF3005E6D31 /* TLTabBarViewController.h */,
+				05B6A15A1D4ADEF3005E6D31 /* TLTabBarViewController.m */,
+				05B6A15C1D4AE062005E6D31 /* TLTableViewController.h */,
+				05B6A15D1D4AE062005E6D31 /* TLTableViewController.m */,
+				05B6A15F1D4AF42B005E6D31 /* TLPersonalViewController.h */,
+				05B6A1601D4AF42B005E6D31 /* TLPersonalViewController.m */,
+			);
+			name = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				058DEA771D49F18B0003E240 /* LaunchScreen.storyboard in Resources */,
+				05B6A1671D4B343C005E6D31 /* progress.plist in Resources */,
 				058DEA741D49F18B0003E240 /* Assets.xcassets in Resources */,
 				058DEA721D49F18B0003E240 /* Main.storyboard in Resources */,
 			);
@@ -150,7 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				058DEA6F1D49F18B0003E240 /* ViewController.m in Sources */,
+				05B6A16D1D4B9234005E6D31 /* ItemDetailViewController.m in Sources */,
 				058DEA6C1D49F18B0003E240 /* AppDelegate.m in Sources */,
+				05B6A16A1D4B3778005E6D31 /* TLItem.m in Sources */,
+				05B6A15B1D4ADEF4005E6D31 /* TLTabBarViewController.m in Sources */,
+				05B6A1651D4B2C5F005E6D31 /* tabChangeController.m in Sources */,
+				05B6A15E1D4AE062005E6D31 /* TLTableViewController.m in Sources */,
+				05B6A1611D4AF42B005E6D31 /* TLPersonalViewController.m in Sources */,
 				058DEA691D49F18B0003E240 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +372,7 @@
 				058DEA7D1D49F18B0003E240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
